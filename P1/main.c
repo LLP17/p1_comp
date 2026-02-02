@@ -40,12 +40,17 @@ void run_scan(const char *filename)
 {
     // TODO: Implement the scanner
     yyin = fopen(filename,"r"); 
+    
+    if(yyin == NULL){ 
+        fprintf(stderr,"Error: Could not open file:%s\n",filename);
+        exit(1);
+    }
     token_t textToken = yylex();
     while(textToken != TOKEN_EOF){ 
     if(textToken == TOKEN_ERROR)
     { 
-        printf("Scan Error: Unexpected character '%s' at line %d", yytext, yylineno); 
-        break; 
+        fprintf(stderr, "Scan Error: Unexpected Token '%s' at line %d", yytext, yylineno); 
+        continue;
     }
     else 
     { 
