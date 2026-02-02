@@ -1,0 +1,75 @@
+#ifndef TOKEN_H
+#define TOKEN_H
+
+typedef enum {
+     TOKEN_EOF=0,
+     /* Arithmetic operators */
+     TOKEN_ADD,
+     TOKEN_SUBTRACT,
+     TOKEN_MULTIPLICATION,
+     TOKEN_DIVISION,
+     TOKEN_EXPONENTIATION,
+     TOKEN_UNARY_NEGATION,
+     TOKEN_MODULOS,
+ 
+     /* Increment / decrement */
+     TOKEN_POSTFIX_INCREMENT,
+     TOKEN_POSTFIX_DECREMENT,
+ 
+     /* Keywords */
+     TOKEN_KEYWORD_WHILE,
+     TOKEN_KEYWORD_ARRAY,
+     TOKEN_KEYWORD_ELSE,
+     TOKEN_KEYWORD_FALSE,
+     TOKEN_KEYWORD_FOR,
+     TOKEN_KEYWORD_FUNCTION,
+     TOKEN_KEYWORD_IF,
+     TOKEN_KEYWORD_PRINT,
+     TOKEN_KEYWORD_RETURN,
+     TOKEN_KEYWORD_TRUE,
+     TOKEN_KEYWORD_VOID,
+ 
+     /* Atomic types */
+     TOKEN_ATOMIC_TYPE_BOOLEAN,
+     TOKEN_ATOMIC_TYPE_CHAR,
+     TOKEN_ATOMIC_TYPE_INTEGER,
+     TOKEN_ATOMIC_TYPE_STRING,
+ 
+     /* Brackets / punctuation */
+     TOKEN_LEFT_SQUARE_BRACKETS,
+     TOKEN_RIGHT_SQUARE_BRACKETS,
+     TOKEN_RIGHT_PARENTHESES, 
+     TOKEN_LEFT_PARENTHESES,
+     TOKEN_COLON,
+     TOKEN_SEMICOLON,
+ 
+     /* Comparison operators */
+     TOKEN_LESS_THAN,
+     TOKEN_LESS_THAN_OR_EQUAL,
+     TOKEN_GREATER_THAN,
+     TOKEN_GREATER_THAN_OR_EQUAL,
+     TOKEN_LOGICAL_EQUIVALENCE,
+     TOKEN_NOT_EQUAL,
+ 
+     /* Logical operators */
+     TOKEN_LOGICAL_AND,
+     TOKEN_LOGICAL_OR,
+     TOKEN_LOGICAL_NOT,
+ 
+     /* Identifiers & literals */
+     TOKEN_IDENTIFIER_FUNCTION,
+     TOKEN_IDENTIFIER,
+     TOKEN_STRING_LITERAL,
+     TOKEN_CHARACTER_LITERAL,
+     TOKEN_INTEGER_LITERAL,
+     
+     /* Assignment Operator */ 
+     TOKEN_ASSIGNMENT,
+     
+     /* Error */
+     TOKEN_ERROR
+} token_t;
+
+#pragma once 
+	extern const char* TokenList[];
+#endif
