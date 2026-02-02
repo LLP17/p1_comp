@@ -28,7 +28,7 @@ string                { return TOKEN_ATOMIC_TYPE_STRING; }
 true                  { return TOKEN_KEYWORD_TRUE; }
 void                  { return TOKEN_KEYWORD_VOID; }
 \*                    { return TOKEN_MULTIPLICATION; }
-\[                    { return TOKEN_LEFT_SQUARE_BRACKETS}
+\[                    { return TOKEN_LEFT_SQUARE_BRACKETS; }
 \]                    { return TOKEN_RIGHT_SQUARE_BRACKETS; }
 "/"                   { return TOKEN_DIVISION; } 
 \%                    { return TOKEN_MODULOS; }
